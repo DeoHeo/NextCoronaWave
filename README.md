@@ -2,8 +2,6 @@
 
 is a Local Check for Check MK with monitoring the count of new cases with Corona. 
 
-This is my first project with Git. I want learn programming and using Git.
-
 ## Installation
 
 https://checkmk.de/cms_localchecks.html
