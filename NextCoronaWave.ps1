@@ -41,17 +41,17 @@ $ger = $False
 $choice = 0
 $crashed =''
 
-#get json content from th API
 Function GetContent {
     param(
     $objectid
     )
+    #get json content
     try{
     #API
     $site = Invoke-WebRequest "https://services7.arcgis.com/mOBPykOjAyBO2ZKk/arcgis/rest/services/RKI_Landkreisdaten/FeatureServer/0/query?where=OBJECTID=%27$objectid%27&outFields=OBJECTID,BL,county,cases7_per_100k&returnGeometry=false&f=json" -UseBasicParsing
     IF ($site.StatusDescription -eq "OK"){
         $objoutput = New-Object -TypeName PSObject -Property @{
-			value = $site.Content | ConvertFrom-Json
+            value = $site.Content | ConvertFrom-Json
             status = $true
             }
         }
@@ -111,7 +111,7 @@ ELSE{
     }
 
 
-#return value local check
+
 SWITCH ($choice){
     0 {"0 $servicename count=$varcount;$warn;$crit;;  OK - $var neue Faelle in den letzten 7 Tagen pro 100.000 Einwohner im $lankreis in $bundesland. Wenn der Schwellwert $crit uebersteigt, gibt es neue Restriktionen vom Landkreis $lankreis."}            
     1 {"1 $servicename count=$varcount;$warn;$crit;;  WARN - $var neue Faelle in den letzten 7 Tagen pro 100.000 Einwohner im $lankreis in $bundesland. Wenn der Schwellwert $crit uebersteigt, gibt es neue Restriktionen vom Landkreis $lankreis."}            
