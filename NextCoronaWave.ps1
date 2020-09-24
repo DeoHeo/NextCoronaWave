@@ -16,9 +16,11 @@
     .NOTES
     Author: Deo_Heo
     Last Updated: 13.08.2020
-    Version: 0.1 Initial Version
-             1.0 Einmonatigen Test
-             2.0 Erweiterung Angrenzende Landkreise
+    Version: 0.1 Initial Version                             13.08.2020
+             0.2 Debugging Invoke-WebRequest                 19.09.2020
+             1.0 Einmonatiger Test                           19.09.2020
+             2.0 Erweiterung Angrenzende Landkreise          24.09.2020
+             2.1 Anzahl der angrenzenden Landkreise variable ?
 
     Requires:
     PowerShell
