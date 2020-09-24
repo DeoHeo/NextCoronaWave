@@ -13,9 +13,11 @@ The check is only to use in Germany for one "Landkreis". The example "Landkreis"
 Choose under the following web page the objectid for the appropriate county:
 https://npgeo-corona-npgeo-de.hub.arcgis.com/datasets/917fc37a709542548cc3be077a786c17_0?geometry=-26.087%2C46.269%2C46.994%2C55.886
 
+
 Attention: When the "Landkreise" have umlauts or special characters, than have to work with the function Replace.
 
 Example: Line 95 $lankreis2 = $objoutput.value2.features.attributes.county -replace ' ','_' -replace 'ß','ss'
+
 
 Attention: When you need more or less adjoining "Landkreise", than manuell erase or add the lines. In future it give a variable mechanism.
 
